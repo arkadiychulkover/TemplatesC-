@@ -1,7 +1,7 @@
 ﻿namespace TemplatesC_
 {
     internal class Program
-    {
+    {//
         static void Main(string[] args)
         {
             int x = 0;
