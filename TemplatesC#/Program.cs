@@ -11,11 +11,11 @@
             Console.WriteLine($"x: {x}, y: {y}");
 
             PrQueue<int> pq = new PrQueue<int>();
-            pq.AddNode(1, 1);
-            pq.AddNode(2, 2);
-            pq.AddNode(3, 3);
-            pq.AddNode(4, 4);
-            pq.AddNode(5, 5);
+            pq.Add(1, 1);
+            pq.Add(2, 2);
+            pq.Add(3, 3);
+            pq.Add(4, 4);
+            pq.Add(5, 5);
             pq.IncreaseKey(3, 6);
             pq.Del();
             pq.Show();
@@ -99,7 +99,7 @@
             head = null;
         }
 
-        public void AddNode(T item, int priority)
+        public void Add(T item, int priority)
         {
             Node newNode = new Node { Data = item, Priority = priority, Next = null };
 
@@ -160,7 +160,7 @@
             else
                 head = targetNode.Next;
 
-            AddNode(item, newPriority);
+            Add(item, newPriority);
         }
         public T Del()
         {
@@ -452,7 +452,7 @@
                 return;
             }
             Node temp = head;
-            while (temp != null && !EqualityComparer<T>.Default.Equals(temp.Data, item))
+            while (temp != null && !EqualityComparer<T>.Default.Equals(temp.Data, item))//посмотрел в инете
             {
                 temp = temp.Next;
             }
